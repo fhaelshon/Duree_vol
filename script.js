@@ -80,8 +80,8 @@
             let duree_m = difference % 60;
 
             // Afficher dans le tableau de la popup
-            depart.innerText = '${hd} h ${md} min';
-            arrivee.innerText = '${ha} h ${ma} min';
+            depart.innerText = hd +" h" + md +" min";
+            arrivee.innerText = ha +" h" + ma +" min";
 
             // Vider les champs
             document.getElementById('hd').value = "";
@@ -90,7 +90,7 @@
             document.getElementById('ma').value = "";
 
             // Résultat
-            resultats.innerText = 'La durée du vol est de ${duree_h}h et ${duree_m}min.';
+            resultats.innerText = "La durée du vol est de " + duree_h + "h et " + duree_m + "min."
             
             // Ouvrir la popup
             afficherPopup();
