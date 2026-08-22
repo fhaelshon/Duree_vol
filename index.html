@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de la durée d'un vol</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Durée d'un vol</h2>
+
+        <div class="vol_type_box">
+            <p>Quel vol avez-vous pris ?</p>
+            <div class="btn_type_vol">
+                <button class="btn active" id="btn_un_jour" title="Vol sur une journée, ex: 8h-18h">24 H</button>
+                <button class="btn" id="btn_deux_jours" title="vol sur deux jour, ex: 20h-4h">48 H</button>
+            </div>
+        </div>
+        
+        <p class="ind">Départ du vol</p>
+        <label for="hd">Heure de départ</label>
+        <input type="number" min="0" max="23" placeholder="Ex: 14" id="hd">
+        
+        <label for="md">Minute de départ</label>
+        <input type="number" min="0" max="59" placeholder="Ex: 30" id="md">
+        
+        <p class="ind">Arrivée du vol</p>
+        <label for="ha">Heure d'arrivée</label>
+        <input type="number" min="0" max="23" placeholder="Ex: 18" id="ha">
+        
+        <label for="ma">Minute d'arrivée</label>
+        <input type="number" min="0" max="59" placeholder="Ex: 45" id="ma">
+
+        <button class="valider" onclick="verifie_champ()">Valider</button>
+    </div>
+
+    <!-- POPUP qui contient actualisation + resultats -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="fermerPopup()" title="Fermer">&times;</button>
+            
+            <!-- Petit tableau Départ / Arrivée -->
+            <table class="table-vol">
+                <thead>
+                    <tr>
+                        <th>Départ</th>
+                        <th>Arrivée</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="depart">—</td>
+                        <td class="arrivee">—</td>
+                    </tr>
+                </tbody>
+            </table>
+            <output class="resultats">Information de sortie</output>
+        </div>
+    </div>
+
+    <footer>
+        <p class="pieds">© 2026 - Durée ~ Vol | Tous droits réservés.</p>
+        <div class="liens">
+            <a href="#">Mentions-légales</a>
+            <a href="+2290123456789">Contact</a>
+            <a href="https://github.com/fhaelshon">github</a>
+            <a href="https://wa.me/message/DMYRMSAG4H6GD1?sqr=qr" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+</body>
+</html>
